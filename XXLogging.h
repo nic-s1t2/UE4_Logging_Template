@@ -3,6 +3,8 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "UObject/NoExportTypes.h"
+#include "XXLogging.generated.h"
 
 DECLARE_LOG_CATEGORY_EXTERN(XXLog, Log, All);
 

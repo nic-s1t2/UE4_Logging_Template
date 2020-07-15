@@ -48,3 +48,18 @@ void XXLogging::LogOnScreen(UObject* Context, FString Message, FColor Color)
 
 	GEngine->AddOnScreenDebugMessage(-1, 5.0f, Color, *Msg);
 }
+
+void UXXLogging::LogMessage(UObject* Context, FString Message, bool bLogOnScreen /*= false*/, FLinearColor Color /*= FColor::White*/)
+{
+	XXLogging::Message(Context, Message, bLogOnScreen, Color.ToFColor(false));
+}
+
+void UXXLogging::LogWarning(UObject* Context, FString Message, bool bLogOnScreen /*= true*/, FLinearColor Color /*= FColor::Yellow*/)
+{
+	XXLogging::Warning(Context, Message, bLogOnScreen, Color.ToFColor(false));
+}
+
+void UXXLogging::LogError(UObject* Context, FString Message, bool bLogOnScreen /*= true*/, FLinearColor Color /*= FColor::Red*/)
+{
+	XXLogging::Error(Context, Message, bLogOnScreen, Color.ToFColor(false));
+}

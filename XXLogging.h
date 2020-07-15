@@ -24,3 +24,19 @@ namespace XXLogging
 
 	void LogOnScreen(UObject* Context, FString Message, FColor Color);
 }
+
+UCLASS()
+class XXXXXXXX_API UXXLogging : public UObject
+{
+	GENERATED_BODY()
+
+	UFUNCTION(BlueprintCallable, meta = (Category = "XXLogging", WorldContext = "Context"))
+	static void LogMessage(UObject* Context, FString Message, bool bLogOnScreen = false, FLinearColor Color = FLinearColor::White);
+
+	UFUNCTION(BlueprintCallable, meta = (Category = "XXLogging", WorldContext = "Context"))
+	static void LogWarning(UObject* Context, FString Message, bool bLogOnScreen = true, FLinearColor Color = FLinearColor::Yellow);
+
+	UFUNCTION(BlueprintCallable, meta = (Category = "XXLogging", WorldContext = "Context"))
+	static void LogError(UObject* Context, FString Message, bool bLogOnScreen = true, FLinearColor Color = FLinearColor::Red);
+
+};

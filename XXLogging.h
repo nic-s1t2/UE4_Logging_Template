@@ -32,13 +32,13 @@ class XXXXXXXX_API UXXLogging : public UObject
 {
 	GENERATED_BODY()
 
-	UFUNCTION(BlueprintCallable, meta = (Category = "XXLogging", WorldContext = "Context"))
+	UFUNCTION(BlueprintCallable, meta = (Category = "XXLogging", WorldContext = "Context", AdvancedDisplay="bLogOnScreen, Color"))
 	static void LogMessage(UObject* Context, FString Message, bool bLogOnScreen = false, FLinearColor Color = FLinearColor::White);
 
-	UFUNCTION(BlueprintCallable, meta = (Category = "XXLogging", WorldContext = "Context"))
+	UFUNCTION(BlueprintCallable, meta = (Category = "XXLogging", WorldContext = "Context", AdvancedDisplay="bLogOnScreen, Color"))
 	static void LogWarning(UObject* Context, FString Message, bool bLogOnScreen = true, FLinearColor Color = FLinearColor::Yellow);
 
-	UFUNCTION(BlueprintCallable, meta = (Category = "XXLogging", WorldContext = "Context"))
+	UFUNCTION(BlueprintCallable, meta = (Category = "XXLogging", WorldContext = "Context", AdvancedDisplay="bLogOnScreen, Color"))
 	static void LogError(UObject* Context, FString Message, bool bLogOnScreen = true, FLinearColor Color = FLinearColor::Red);
 
 };
